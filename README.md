@@ -73,6 +73,14 @@ img/street.jpg
 ```
 4. 利用video.py可进行摄像头检测。  
 
+## 训练步骤 V2
+1. 创建 test.txt,train.txt,val.txt三个文件
+2. 文件内容为
+```
+[image_path] xmin,ymin,xmax,ymax,category xmin,ymin,xmax,ymax,category xmin,ymin,xmax,ymax,category ....
+```
+其中 image_path 表示图片地址 后面每个5元组表示每个instance的位置和对应的分类id（id要对应model_data/new_classes.txt的顺序）
+
 ## 训练步骤
 1. 本文使用VOC格式进行训练。  
 2. 训练前将标签文件放在VOCdevkit文件夹下的VOC2007文件夹下的Annotation中。  
